@@ -1,5 +1,10 @@
-const test = require('../lib/test-framework.js');
-const sourceFunctions = require('../src/source.js');
+const {deepStrictEqual} = require('assert');
+const {describe, it} = require('node:test');
+const {one} = require('../src/source.js');
 
-test.assertEquality(1, sourceFunctions.one, '1 should be one');
-test.assertEquality(2, sourceFunctions.one, '2 should not be one');
+describe('sample test', function() {
+  it('should return true', function() {
+    deepStrictEqual(one, 1);
+  });
+});
+
